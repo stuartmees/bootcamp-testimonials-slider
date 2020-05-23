@@ -1,3 +1,68 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+}
+
+.testimonial {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+figcaption {
+    width: 54%;
+    position: relative;
+    top: 250px
+}
+
+img {
+    position: relative;
+    left: 600px;
+    bottom: 200px;
+    z-index: -1;
+    width: 50%;
+    box-shadow: 0 25px 70px -50px black;
+}
+
+.text {
+    color: hsl(240, 38%, 20%);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.name {
+    color: hsl(240, 38%, 20%);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.role {
+    color: hsl(240, 18%, 77%);
+    font-weight: 500;
+    font-size: 25px;
+}
+
+#buttons {
+    position: relative;
+    left: 870px;
+    bottom: 260px;
+}
+
+#buttons>button {
+    height: 60px;
+    width: 60px;
+    border: none;
+}
+
+.prev-testimonial {
+    border-radius:  50% 0 0 50%;
+}
+
+.next-testimonial {
+    border-radius: 0 50% 50% 0;
+}
+
+
+
 
 .fade-in {
     animation: fadeIn ease 2s;
