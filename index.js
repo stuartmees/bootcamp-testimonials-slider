@@ -18,31 +18,38 @@ let testimonials = [
 ];
 
 window.addEventListener('DOMContentLoaded', function(){
-    const button = document.getElementsByClassName('change-testimonial')[0];
+    const buttons = Array.from(document.getElementsByClassName('change-testimonial'));
     const image = document.getElementsByClassName('image')[0];
     const text = document.getElementsByClassName('text')[0];
     const name = document.getElementsByClassName('name')[0];
     const role = document.getElementsByClassName('role')[0];
-
+    const testimonial = document.getElementsByClassName('testimonial')[0];
 
     function popuplateTestimonial() {
-        image.src = testimonials[i].image;
-        text.innerHTML = testimonials[i].text;
-        name.innerHTML = testimonials[i].name;
-        role.innerHTML = testimonials[i].role;
+        const innerHTML =     
+            `<article class="fade-in">
+                <img class="image" src=${testimonials[i].image} width='400' heigh='200'>
+                <p class="text">${testimonials[i].text}</p>
+                <p class="name">${testimonials[i].name}</p>
+                <p class="role">${testimonials[i].role}</p>
+            </article>`
+
+        testimonial.innerHTML = innerHTML;
     };
 
-    popuplateTestimonial();
-
-    button.onclick = () => {
-        if ( i === 0) {
-            i = 1
-        } else {
-            i = 0
-        };
-    
+    buttons.forEach(button => {
+        button.onclick = () => {
+            if ( i === 0) {
+                i = 1
+            } else {
+                i = 0
+            };
+        
         popuplateTestimonial()
-    }
+        }
+    });
+
+    popuplateTestimonial();
 })
 
 
