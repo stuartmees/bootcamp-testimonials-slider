@@ -1,5 +1,3 @@
-console.log('slider up and running')
-
 let i = 0;
 
 let testimonials = [
@@ -18,7 +16,8 @@ let testimonials = [
 ];
 
 window.addEventListener('DOMContentLoaded', function(){
-    const buttons = Array.from(document.getElementsByClassName('change-testimonial'));
+    const prevTest = document.getElementsByClassName('prev-testimonial')[0];
+    const nextTest = document.getElementsByClassName('next-testimonial')[0];
     const image = document.getElementsByClassName('image')[0];
     const text = document.getElementsByClassName('text')[0];
     const name = document.getElementsByClassName('name')[0];
@@ -37,17 +36,19 @@ window.addEventListener('DOMContentLoaded', function(){
         testimonial.innerHTML = innerHTML;
     };
 
-    buttons.forEach(button => {
-        button.onclick = () => {
-            if ( i === 0) {
-                i = 1
-            } else {
-                i = 0
-            };
-        
-        popuplateTestimonial()
-        }
-    });
+    prevTest.onclick = () => {
+        if (i>0) {
+            i--
+            popuplateTestimonial()
+        };
+    };
+
+    nextTest.onclick = () => {
+        if (i<testimonials.length) {
+            i++
+            popuplateTestimonial()
+        };
+    };
 
     popuplateTestimonial();
 })
