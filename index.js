@@ -16,8 +16,8 @@ let testimonials = [
 ];
 
 window.addEventListener('DOMContentLoaded', function(){
-    const prevTest = document.getElementsByClassName('prev-testimonial')[0];
-    const nextTest = document.getElementsByClassName('next-testimonial')[0];
+    const prevTestButton = document.getElementsByClassName('prev-testimonial')[0];
+    const nextTestButton = document.getElementsByClassName('next-testimonial')[0];
     const image = document.getElementsByClassName('image')[0];
     const text = document.getElementsByClassName('text')[0];
     const name = document.getElementsByClassName('name')[0];
@@ -26,38 +26,57 @@ window.addEventListener('DOMContentLoaded', function(){
 
     function popuplateTestimonial() {
         const innerHTML =     
-            `<figure class="fade-in">
-                <img class="image" src=${testimonials[i].image} width='400' heigh='200'>
-                <figcaption>
-                    <p class="text">" ${testimonials[i].text} "</p>
-                    <div>
-                        <span class="name">${testimonials[i].name}</span>
-                        <span class="role">${testimonials[i].role}</span>
-                    <div>
-                </figcaption>
-            </figure>`
-
+        `<figure class="fade-in">
+            <img class="image" src=${testimonials[i].image} width='400' heigh='200'>
+            <figcaption>
+                <p class="text">" ${testimonials[i].text} "</p>
+                <div>
+                    <span class="name">${testimonials[i].name}</span>
+                    <span class="role">${testimonials[i].role}</span>
+                <div>
+            </figcaption>
+        </figure>`
+        
         testimonial.innerHTML = innerHTML;
     };
-
-    prevTest.onclick = () => {
+    
+    
+    const prevTest = () => {
         console.log(i)
         if (i>0) {
             i--
             popuplateTestimonial()
         };
     };
-
-    nextTest.onclick = () => {
-        console.log(i)
+    
+    const nextTest = () => {
         if (i<testimonials.length-1) {
             i++
             popuplateTestimonial()
         };
     };
-
+    
     popuplateTestimonial();
+
+    prevTestButton.onclick = prevTest;
+    
+    nextTestButton.onclick = nextTest;
+
+    window.addEventListener('keydown', function(event){
+        const x = event.which || event.keyCode;
+        switch(x){
+            case 39:
+                nextTest();
+                break;
+            case 37:
+                prevTest();
+                break;
+        }
+    });
+
 })
+
+
 
 
 
