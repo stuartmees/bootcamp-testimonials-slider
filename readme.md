@@ -3,9 +3,9 @@
 ## My Focus For the Task:
 
 1) To use semantic HTML
-2) To implement a modular approach to making a very simple JS app using Vanilla JS and without using a module bundler.
+2) To implement a IIFE modular approach, using Vanilla JS and without using a module bundler.
 3) Arrange CSS appropriately.
-4) To produce app so it resembles the design as close as possible.
+4) To produce app so it resembles the design as closely as possible.
 
 
 ## Issues:
