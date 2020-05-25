@@ -67,6 +67,7 @@ figcaption>div>span {
     left: 930px;
     bottom: 60px;
     width: 120px;
+    height: 60px;
     z-index: 2
 }
 
@@ -89,9 +90,6 @@ figcaption>div>span {
     border-radius: 0 50% 50% 0;
 }
 
-
-
-
 .fade-in {
     animation: fadeIn ease 2s;
 }
@@ -100,6 +98,9 @@ figcaption>div>span {
     0% {opacity:0;}
     100% {opacity:1;}
 }
+
+
+
 
 
 @media only screen and (max-width: 375px) {
@@ -153,7 +154,7 @@ figcaption>div>span {
 
     #buttons {
         margin: 0 auto;
-        bottom: 148px;
+        bottom: 157px;
         left: auto;
         width: 65px;
         height: 35px;
