@@ -8,35 +8,34 @@ body {
 }
 
 .testimonial {
-    position: relative;
-    top: 50px;
-    width: 1500px;
+    width: 1422px;
     margin: 0 auto;
 }
 
 article {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    padding: 65px;
+}
+
+.photo {
     background-image: url('../assets/svg/pattern-bg.svg');
     background-repeat: no-repeat;
     background-position: right;
     background-size: auto 100%;
-    padding: 65px;
+    padding: 75px;
 }
 
-article>img {
+.photo>img {
     position: relative;
-    right: 50px;
+    right: 25px;
     z-index: 1;
-    width: 45%;
     box-shadow: 0 45px 90px -65px black;
 }
 
-.caption  {
-    width: 54%;
-    position: relative;
-    top: 150px;
-    left: 15px;
+.quote  {
+    width: 65%;
     z-index: 3;
 }
 
@@ -46,13 +45,14 @@ article>img {
     letter-spacing: 0.1px;
     line-height: 1.3;
     font-size: 35px;
+    width: 126%;
 }
 
-.caption >div {
+.quote >div {
     margin-top: 50px;
 }
 
-.caption>div>span {
+.quote>div>span {
     font-size: 22px;
 }
 
@@ -67,9 +67,6 @@ article>img {
 }
 
 #buttons {
-    position: relative;
-    left: 930px;
-    bottom: 60px;
     width: 120px;
     height: 60px;
     z-index: 2
@@ -129,7 +126,7 @@ article>img {
         padding: 20px;
     }
 
-    article>img {
+    .photo>img {
         position: static;
         z-index: 1;
         width: 90%;
@@ -137,7 +134,7 @@ article>img {
         border-radius: 2%;
     }
 
-    .caption {
+    .quote {
         margin-top: 40px;
         position: static;
         text-align: center;
@@ -150,15 +147,15 @@ article>img {
         font-size: 15px;
     }
 
-    .caption>div {
+    .quote>div {
         margin-top: 20px;
     }
     
-    .caption>div>span {
+    .quote>div>span {
         font-size: 12px;
     }
 
-    .caption>div>span:first-of-type {
+    .quote>div>span:first-of-type {
         display: block;
     }
 
