@@ -7,6 +7,34 @@ body {
     background-size: 45% auto;
 }
 
+#buttons {
+    position: relative;
+    top: 645px;
+    left: 908px;
+    width: 120px;
+    height: 60px;
+    z-index: 2
+}
+
+#buttons>button {
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    border: none;
+}
+
+#buttons>button:focus {
+    outline:none;
+}
+
+.prev-testimonial {
+    border-radius:  50% 0 0 50%;
+}
+
+.next-testimonial {
+    border-radius: 0 50% 50% 0;
+}
+
 .testimonial {
     width: 1422px;
     margin: 0 auto;
@@ -66,33 +94,6 @@ article {
     font-weight: 500;
 }
 
-#buttons {
-    position: relative;
-    top: 645px;
-    left: 908px;
-    width: 120px;
-    height: 60px;
-    z-index: 2
-}
-
-#buttons>button {
-    background-color: white;
-    height: 100%;
-    width: 50%;
-    border: none;
-}
-
-#buttons>button:focus {
-    outline:none;
-}
-
-.prev-testimonial {
-    border-radius:  50% 0 0 50%;
-}
-
-.next-testimonial {
-    border-radius: 0 50% 50% 0;
-}
 
 .fade-in {
     animation: fadeIn ease 2s;
@@ -108,7 +109,21 @@ article {
 
 
 @media only screen and (max-width: 375px) {
-
+    
+    #buttons {
+        margin: 0 auto;
+        position: relative;
+        top: 218px;
+        left: auto;
+        width: 65px;
+        height: 35px;
+        z-index: 2
+    }
+    
+    #buttons>button>img {
+        height: 35%;
+    }
+    
     body {
         background-size: 40% auto;
     }
@@ -167,17 +182,4 @@ article {
         display: block;
     }
 
-    #buttons {
-        margin: 0 auto;
-        position: relative;
-        top: 218px;
-        left: auto;
-        width: 65px;
-        height: 35px;
-        z-index: 2
-    }
-
-    #buttons>button>img {
-        height: 35%;
-    }
 }
