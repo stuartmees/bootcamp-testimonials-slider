@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', function(){
-    
     let i = 0;
     const testimonials = app.getTestimonials();
 
@@ -12,7 +11,6 @@ window.addEventListener('DOMContentLoaded', function(){
         
         testimonial.innerHTML = innerHTML;
     };
-    
     
     const prevTest = () => {
         if (i>0) {
@@ -28,12 +26,6 @@ window.addEventListener('DOMContentLoaded', function(){
         };
     };
     
-    popuplateTestimonial();
-
-    prevTestButton.onclick = prevTest;
-    
-    nextTestButton.onclick = nextTest;
-
     window.addEventListener('keydown', function(event){
         const x = event.which || event.keyCode;
         switch(x){
@@ -45,4 +37,11 @@ window.addEventListener('DOMContentLoaded', function(){
                 break;
         }
     });
+
+    
+    prevTestButton.onclick = prevTest;
+    
+    nextTestButton.onclick = nextTest;
+    
+    popuplateTestimonial();
 });

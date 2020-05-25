@@ -2,16 +2,16 @@
 
     const innerHTML = (testimonials, i) => {
         return(
-            `<figure class="fade-in">
+            `<article class="fade-in">
                 <img class="image" src=${testimonials[i].image} width='400' heigh='200'>
-                <figcaption>
+                <section class="caption">
                     <p class="text">" ${testimonials[i].text} "</p>
                     <div>
                         <span class="name">${testimonials[i].name}</span>
                         <span class="role">${testimonials[i].role}</span>
                     <div>
-                </figcaption>
-            </figure>`
+                </section>
+            </article>`
         )
     }            
 

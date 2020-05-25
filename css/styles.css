@@ -1,5 +1,10 @@
 body {
+    min-height: 100vh;
     font-family: 'Inter', sans-serif;
+    background-image: url('../assets/svg/pattern-curve.svg');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 45% auto;
 }
 
 .testimonial {
@@ -9,7 +14,7 @@ body {
     margin: 0 auto;
 }
 
-figure {
+article {
     display: flex;
     flex-direction: row-reverse;
     background-image: url('../assets/svg/pattern-bg.svg');
@@ -19,7 +24,7 @@ figure {
     padding: 65px;
 }
 
-figure>img {
+article>img {
     position: relative;
     right: 50px;
     z-index: 1;
@@ -27,8 +32,7 @@ figure>img {
     box-shadow: 0 45px 90px -65px black;
 }
 
-figcaption {
-    height: 100px;
+.caption  {
     width: 54%;
     position: relative;
     top: 150px;
@@ -44,11 +48,11 @@ figcaption {
     font-size: 35px;
 }
 
-figcaption>div {
+.caption >div {
     margin-top: 50px;
 }
 
-figcaption>div>span {
+.caption>div>span {
     font-size: 22px;
 }
 
@@ -104,12 +108,18 @@ figcaption>div>span {
 
 
 @media only screen and (max-width: 375px) {
+
+    body {
+        background-size: 40% auto;
+    }
+
     .testimonial {
+        position: static;
+        padding-top: 30px;
         width: 80vw;
-        top: 20px;
     }
     
-    figure {
+    article {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -119,7 +129,7 @@ figcaption>div>span {
         padding: 20px;
     }
 
-    figure>img {
+    article>img {
         position: static;
         z-index: 1;
         width: 90%;
@@ -127,7 +137,7 @@ figcaption>div>span {
         border-radius: 2%;
     }
 
-    figcaption {
+    .caption {
         margin-top: 40px;
         position: static;
         text-align: center;
@@ -140,21 +150,21 @@ figcaption>div>span {
         font-size: 15px;
     }
 
-    figcaption>div {
+    .caption>div {
         margin-top: 20px;
     }
     
-    figcaption>div>span {
+    .caption>div>span {
         font-size: 12px;
     }
 
-    figcaption>div>span:first-of-type {
+    .caption>div>span:first-of-type {
         display: block;
     }
 
     #buttons {
         margin: 0 auto;
-        bottom: 157px;
+        bottom: 281px;
         left: auto;
         width: 65px;
         height: 35px;
