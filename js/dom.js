@@ -2,17 +2,16 @@ window.addEventListener('DOMContentLoaded', function(){
     let i = 0;
     const testimonials = app.getTestimonials();
 
-    const prevTestButton = document.getElementsByClassName('prev-testimonial')[0];
-    const nextTestButton = document.getElementsByClassName('next-testimonial')[0];
-    const testimonial = document.getElementsByClassName('testimonial')[0];
-    const image = document.getElementsByClassName('image')[0]
-    const text = document.getElementsByClassName('text')[0]
+    const prevTestButton = document.getElementsByClassName('button-prev')[0];
+    const nextTestButton = document.getElementsByClassName('button-next')[0];
+    const photo = document.getElementsByClassName('photo')[0]
+    const quote = document.getElementsByClassName('quote')[0]
     const name = document.getElementsByClassName('name')[0]
     const role = document.getElementsByClassName('role')[0]
 
     function popuplateTestimonial() {
-        image.src = testimonials[i].image;
-        text.innerHTML = '" ' + testimonials[i].text + ' "';
+        photo.src = testimonials[i].image;
+        quote.innerHTML = '" ' + testimonials[i].quote + ' "';
         name.innerHTML = testimonials[i].name;
         role.innerHTML = testimonials[i].role;
     };
