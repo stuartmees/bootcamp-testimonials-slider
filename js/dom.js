@@ -11,13 +11,10 @@ window.addEventListener('DOMContentLoaded', function(){
     const role = document.getElementsByClassName('role')[0]
 
     function popuplateTestimonial() {
-        const innerHTML = app.getInnerHTML(testimonials, i);
-        testimonial.innerHTML = innerHTML;
-
-        // image.src = testimonials[i].image;
-        // text.src = testimonials[i].text;
-        // name.src = testimonials[i].name;
-        // role.src = testimonials[i].role;
+        image.src = testimonials[i].image;
+        text.innerHTML = testimonials[i].text;
+        name.innerHTML = testimonials[i].name;
+        role.innerHTML = testimonials[i].role;
     };
     
     const prevTest = () => {
