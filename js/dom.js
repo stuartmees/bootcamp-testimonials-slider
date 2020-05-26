@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     function popuplateTestimonial() {
         image.src = testimonials[i].image;
-        text.innerHTML = testimonials[i].text;
+        text.innerHTML = '" ' + testimonials[i].text + ' "';
         name.innerHTML = testimonials[i].name;
         role.innerHTML = testimonials[i].role;
     };

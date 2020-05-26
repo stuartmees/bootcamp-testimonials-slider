@@ -8,12 +8,12 @@ body {
 }
 
 #buttons {
-    position: relative;
-    top: 645px;
-    left: 908px;
     width: 120px;
     height: 60px;
-    z-index: 2
+    z-index: 2;
+    position: relative;
+    left: 85px;
+    bottom: 7px;
 }
 
 #buttons>button {
@@ -38,13 +38,10 @@ body {
 .testimonial {
     width: 1422px;
     margin: 0 auto;
-}
-
-article {
+    padding-top: 70px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 0px 65px 65px 65px;
 }
 
 .photo {
@@ -52,18 +49,24 @@ article {
     background-repeat: no-repeat;
     background-position: right;
     background-size: auto 100%;
-    padding: 75px;
+    width: 50%;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
 
 .photo>img {
     position: relative;
-    right: 25px;
+    top: 25px;
+    left: 25px;
     z-index: 1;
-    box-shadow: 0 45px 90px -65px black;
+    box-shadow: 0 45px 130px -65px black;
+    width: 80%;
 }
 
 .quote  {
-    width: 65%;
+    position: relative;
+    right: 40px; 
+    width: 39%;
     z-index: 3;
 }
 
@@ -106,15 +109,10 @@ article {
 
 
 
-
-
 @media only screen and (max-width: 375px) {
     
     #buttons {
         margin: 0 auto;
-        position: relative;
-        top: 218px;
-        left: auto;
         width: 65px;
         height: 35px;
         z-index: 2
